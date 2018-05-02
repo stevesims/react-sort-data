@@ -1,11 +1,10 @@
 {
   "name": "react-sort-data",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "react-sort-data React component",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
-    "css",
     "es",
     "lib",
     "umd"
@@ -20,9 +19,19 @@
   },
   "dependencies": {},
   "peerDependencies": {
+    "prop-types": "^15.6.1",
     "react": "16.x"
   },
   "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "expect": "^22.4.3",
     "nwb": "0.21.x",
     "react": "^16.3.2",
     "react-dom": "^16.3.2"
