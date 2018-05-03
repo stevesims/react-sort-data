@@ -1,6 +1,6 @@
 {
   "name": "react-sort-data",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "react-sort-data React component",
   "main": "lib/index.js",
   "module": "es/index.js",
