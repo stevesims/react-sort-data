@@ -52,7 +52,7 @@ class Sortable extends Component {
     if (this.state.sortField === sortField) {
       this.setState({ reversed: !this.state.reversed });
     } else {
-      const { fields = [] } = this.props;
+      const { fields } = this.props;
 
       this.setState({
         sortField,

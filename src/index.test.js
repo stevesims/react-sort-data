@@ -143,6 +143,37 @@ describe('Component', () => {
 
     expect(wrapper.state('sortField')).toEqual('name');
 
+    wrapper.setProps({ fields: [{ key: 'test' }] });
+
+    expect(wrapper.state('sortField')).toEqual('name');
+
     expect(checkData).toEqual([...data].sort((a, b) => (a.name || '').localeCompare(b.name || '')));
+  });
+
+  it('will sort even when no fields are provided', () => {
+    const data = [{ name: 'first' }, {}, { name: 'before' }, { name: 'second' }];
+    const sortedData = [...data].sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+    let checkData;
+    let setSort;
+
+    shallow(<Component
+      fields={[]}
+      data={data}
+      render={({ data: renderedData, setSortField }) => {
+        checkData = renderedData;
+        setSort = setSortField;
+
+        return null;
+      }}
+    />);
+
+    expect(checkData).toEqual(data);
+
+    setSort('name');
+    expect(checkData).toEqual(sortedData);
+
+    // sort again - should reverse
+    setSort('name');
+    expect(checkData).toEqual(sortedData.reverse());
   });
 });
