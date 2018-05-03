@@ -6,14 +6,14 @@ A data sorting component that uses render props.
 [![npm package][npm-badge]][npm]
 [![Coveralls][coveralls-badge]][coveralls]
 
-[build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
-[build]: https://travis-ci.org/user/repo
+[build-badge]: https://img.shields.io/travis/stevesims/react-sort-data/master.png?style=flat-square
+[build]: https://travis-ci.org/stevesims/react-sort-data
 
 [npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.org/package/npm-package
+[npm]: https://www.npmjs.org/package/react-sort-data
 
-[coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
-[coveralls]: https://coveralls.io/github/user/repo
+[coveralls-badge]: https://img.shields.io/coveralls/stevesims/react-sort-data/master.png?style=flat-square
+[coveralls]: https://coveralls.io/github/stevesims/react-sort-data
 
 Data sorting by this component intended primarily for sorting arrays of objects using string values of given keys.  Provide the component with an array of `data` objects, and an array of `field` definitions (with one indicated as being the `default`) and you'll get back a sorted `data` array.  A field definition may also contain a `sort` function, which should take a `reversed` argument and return back a function that can be used with `Array.sort`.
 

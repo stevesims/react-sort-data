@@ -36,10 +36,13 @@
     "react": "^16.3.2",
     "react-dom": "^16.3.2"
   },
-  "author": "",
-  "homepage": "",
+  "author": "Steve Sims",
+  "homepage": "https://github.com/stevesims/react-sort-data#readme",
   "license": "MIT",
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevesims/react-sort-data"
+  },
   "keywords": [
     "react-component"
   ]
