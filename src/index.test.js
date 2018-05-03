@@ -23,14 +23,14 @@ describe('Component', () => {
   });
 
   it('will render with basic props', () => {
-    render(<Component fields={[]} data={[]} />, node, () => {
+    render(<Component data={[]} />, node, () => {
       expect(node.innerHTML).toContain('');
     });
   });
 
   it('can render via children', () => {
     render(
-      <Component fields={[]} data={[]}>
+      <Component data={[]}>
         {() => <div>Content</div>}
       </Component>,
       node,

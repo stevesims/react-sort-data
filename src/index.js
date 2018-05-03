@@ -9,8 +9,8 @@ class Sortable extends Component {
       key: PropTypes.string.isRequired,
       reversed: PropTypes.bool,
       sort: PropTypes.func,
-    })).isRequired,
-    data: PropTypes.arrayOf(PropTypes.object).isRequired,
+    })),
+    data: PropTypes.arrayOf(PropTypes.any).isRequired,
     defaultSort: PropTypes.func,
     render: PropTypes.func,
   }
@@ -19,28 +19,27 @@ class Sortable extends Component {
     children: null,
     defaultSort: (reverseSort, byField) =>
       (a, b) => (reverseSort ? -1 : 1) * (a[byField] || '').localeCompare(b[byField] || ''),
+    fields: [],
     render: null,
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
     // find default field to sort on
-    if (Array.isArray(nextProps.fields)) {
-      if (
-        prevState.sortField
-        && nextProps.fields.find(field => field.key === prevState.sortField)
-      ) {
-        // old selected sortField is still valid, so don't change state
-        return null;
-      }
+    if (
+      prevState.sortField
+      && nextProps.fields.find(field => field.key === prevState.sortField)
+    ) {
+      // old selected sortField is still valid, so don't change state
+      return null;
+    }
 
-      const fieldInfo = nextProps.fields.find(field => field.default);
+    const fieldInfo = nextProps.fields.find(field => field.default);
 
-      if (fieldInfo) {
-        return {
-          sortField: fieldInfo.key,
-          reversed: !!fieldInfo.reversed,
-        };
-      }
+    if (fieldInfo) {
+      return {
+        sortField: fieldInfo.key,
+        reversed: !!fieldInfo.reversed,
+      };
     }
 
     return null;
@@ -64,7 +63,7 @@ class Sortable extends Component {
   render() {
     const { sortField, reversed } = this.state;
     const {
-      children, fields = [], data, defaultSort, render,
+      children, fields, data, defaultSort, render,
     } = this.props;
     const { sort = defaultSort } = (fields.find(field => field.key === sortField) || {});
     const sortedData = sort ? [...data].sort(sort(reversed, sortField)) : [...data];
