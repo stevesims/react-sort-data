@@ -9,7 +9,7 @@ A data sorting component that uses render props.
 [build-badge]: https://img.shields.io/travis/stevesims/react-sort-data/master.png?style=flat-square
 [build]: https://travis-ci.org/stevesims/react-sort-data
 
-[npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
+[npm-badge]: https://img.shields.io/npm/v/react-sort-data.png?style=flat-square
 [npm]: https://www.npmjs.org/package/react-sort-data
 
 [coveralls-badge]: https://img.shields.io/coveralls/stevesims/react-sort-data/master.png?style=flat-square
