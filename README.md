@@ -6,10 +6,10 @@ A data sorting component that uses render props.
 [![npm package][npm-badge]][npm]
 [![Coveralls][coveralls-badge]][coveralls]
 
-[build-badge]: https://img.shields.io/travis/stevesims/react-sort-data/master.png?style=flat-square
+[build-badge]: https://img.shields.io/travis/stevesims/react-sort-data/master.svg
 [build]: https://travis-ci.org/stevesims/react-sort-data
 
-[npm-badge]: https://img.shields.io/npm/v/react-sort-data.png?style=flat-square
+[npm-badge]: https://img.shields.io/npm/v/react-sort-data.svg
 [npm]: https://www.npmjs.org/package/react-sort-data
 
 [coveralls-badge]: https://coveralls.io/repos/github/stevesims/react-sort-data/badge.svg?branch=master
